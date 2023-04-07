@@ -1,62 +1,82 @@
-body {
-    background-color: #00fbff;
-  }
-  
-  .heading {
-    background-color: #333333;
-    margin-bottom: 20px;
-    padding: 5px 0px 5px 15px;
-    text-align: center; 
-  }
-  
-  .title {
-    background-color: #333333;
-    padding: 5px;
-    color: white;
-    border: 2px solid white;
-  }
-  
-  #runtime {
-    background-color: #333333;
-    color: #3e8fde;
-    padding: 0px 0px 5px 5px;
-  }
-  
-  .content {
-    color: #3e8fde;
-  }
-  
-  #subtitle {
-    color: white;
-    margin-left: 55px;
-  }
-  
-  #showing {
-    margin-left: 20px;
-  }
-  
-  #films li::before {
-    content: "";
-  }
-  
-  .film {
-    font-size: 18px;
-    text-transform: uppercase;
-  }
-  
-  .sold-out {
-    background-color: #FF6B6B;
-    color: white;
-  }
-  
-  img {
-    max-width: 25vw;
-    box-shadow: 2px 2px 5px gray;
-  }
-  
-  #film-info {
-    padding-bottom: 15px;
-  }
-  li{
-    list-style: none;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&family=Righteous&display=swap");
+
+  @import url('https://fonts.googleapis.com/css2?family=Labrada:wght@100&family=Rajdhani&family=Righteous&display=swap');
+body{
+  font-family: 'Labrada', serif;
+  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Righteous', cursive;
+}
+
+/* body {
+  background-color: #fff3e2;
+} */
+
+.heading {
+  background-color: #bacddb;
+  margin-bottom: 20px;
+  padding: 5px 0px 5px 15px;
+  text-align: center;
+}
+
+.title {
+  background-color: #333333;
+  padding: 5px;
+  color: white;
+  border: 2px solid white;
+}
+
+#runtime {
+  background-color: #333333;
+  color: #3e8fde;
+  padding: 0px 0px 5px 5px;
+}
+
+.content {
+  color: #3e8fde;
+}
+
+#subtitle {
+  color: white;
+  margin-left: 55px;
+}
+
+#showing {
+  margin-left: 20px;
+}
+
+#films li::before {
+  content: "";
+}
+
+.film {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.sold-out {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+img {
+  max-width: 25vw;
+  box-shadow: 2px 2px 5px gray;
+}
+
+#film-info {
+  padding-bottom: 15px;
+}
+li {
+  list-style: none;
+}
+#main-heading {
+  font-family: "Rajdhani", sans-serif;
+  font-family: "Righteous", cursive;
+}
+body{
+  background-image:url('bg.png');
+}
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+#subtitle{
+  font-family: 'Tilt Prism', cursive;
+}

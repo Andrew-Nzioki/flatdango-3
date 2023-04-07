@@ -113,9 +113,13 @@ function displayAllmovie(films) {
     let Showtime = document.createElement("p");
     Showtime.innerText = film.showtime;
 
+    let Seats=document.createElement('p')
+    Seats.innerText=`Max Seats : ${film.capacity}`
+
     filmCard.appendChild(Title);
     filmCard.appendChild(posterImg);
     filmCard.appendChild(Showtime);
+    filmCard.appendChild(Seats);
     document.getElementById("all-shows").appendChild(filmCard);
   });
 }
