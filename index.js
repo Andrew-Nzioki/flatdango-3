@@ -5,7 +5,7 @@ const url='http://localhost:3000/films'
       
 function displayMovies(films) {
 films.forEach(film=>{
-   console.log(film.title)
+//    console.log(film.title)
 
  //pointing to the point the films will be rendered on the DOM  
 let card=document.getElementById('films')
@@ -33,30 +33,53 @@ cardBody.className='card-body'
  movieRuntime.className='card-title'
  let showTime=document.createElement('p')
  showTime.className='card-title'
+ showTime.innerText=film.showtime
  
- let availableTickets=document.createElement('p')
+ let availableTickets=document.createElement('h5')
  availableTickets.className='card-title'
-   
+ availableTickets.setAttribute("class", "ticket")
+ availableTickets.setAttribute('id','tick') //ID of tick
+ availableTickets.innerText=`Available Tickets : ${film.capacity-film.tickets_sold}`
 let buyTicketButton=document.createElement('button')
 buyTicketButton.setAttribute("id", "my-button");
+buyTicketButton.innerText='Buy Ticket'
 
    //adding cardBody children to the DOM
     cardBody.appendChild(movieTitle)
-    cardBody.appendChild(movieRuntime)
-    cardBody.appendChild(showTime)
-    cardBody.appendChild(availableTickets)
-    cardBody.appendChild(buyTicketButton)
-
+  
  //Adding MAin poster childre
-    Poster.appendChild(image)// image is a child of Main parent
+    //Poster.appendChild(image)// image is a child of Main parent
     Poster.appendChild(cardBody)//cardBody is a child of Main parent
 
   //adding the final child to the DOM  
     li.appendChild(Poster) //Main parent
-
     card.appendChild(li)
-    })  
+
+ movieTitle.addEventListener('click',(e)=>{
+ console.log('add info')
+ document.getElementById('title-data').innerText=film.title
+ document.getElementById('img').src=film.poster
+ let Tickets=document.getElementById('available-tickets')
+ Tickets.innerText=` Available tickets: ${film.capacity-film.tickets_sold}`
+ 
+ document.getElementById('buy-tickets').addEventListener('click',()=>{
+    let Tickets=document.getElementById('available-tickets')
+ Tickets.innerText=` Available tickets: ${(film.capacity-film.tickets_sold)-1}`
+ })
+   
+
+
+ })
+    //Lets get some events firing 
+    buyTicketButton.addEventListener('click',()=>{
+        console.log('clicked')
+        let val =document.getElementById('tick')
+        val.innerText=`Available tickets : ${(film.capacity-film.tickets_sold)-1}`
+
+    })})  
 }
+
+
 
 //function to get all movies
 function showMovies() {

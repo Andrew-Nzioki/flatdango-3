@@ -57,3 +57,6 @@ body {
   #film-info {
     padding-bottom: 15px;
   }
+  li{
+    list-style: none;
+  }
